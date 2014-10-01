@@ -1,0 +1,22 @@
+have_library: checking for main() in -lc... -------------------- yes
+
+"gcc -o conftest -I/usr/pkg/include/ruby-1.9.3/x86_64-netbsd -I/usr/pkg/include/ruby-1.9.3/ruby/backward -I/usr/pkg/include/ruby-1.9.3 -I. -I/usr/include -I/usr/pkg/include  -I/usr/include -I/usr/pkg/include -O2 -pthread -I/usr/include -I/usr/pkg/include -fPIC -pipe conftest.c  -L. -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -L. -L/usr/lib -Wl,-R/usr/lib -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -pthread -Wl,-export-dynamic     -Wl,-R -Wl,/usr/pkg/lib -L/usr/pkg/lib -lruby193  -lpthread -lrt -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/pkg/include/ruby-1.9.3/x86_64-netbsd -I/usr/pkg/include/ruby-1.9.3/ruby/backward -I/usr/pkg/include/ruby-1.9.3 -I. -I/usr/include -I/usr/pkg/include  -I/usr/include -I/usr/pkg/include -O2 -pthread -I/usr/include -I/usr/pkg/include -fPIC -pipe conftest.c  -L. -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -L. -L/usr/lib -Wl,-R/usr/lib -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -pthread -Wl,-export-dynamic     -Wl,-R -Wl,/usr/pkg/lib -L/usr/pkg/lib -lruby193 -lc  -lpthread -lrt -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+

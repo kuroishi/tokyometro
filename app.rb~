@@ -1,0 +1,22 @@
+
+require 'httpclient'
+require 'sinatra'
+require 'yaml'
+require 'date'
+require 'json'
+
+require 'pp'
+
+API_ENDPOINT = 'https://api.tokyometroapp.jp/api/v2/'
+DATAPOINTS_URL = API_ENDPOINT + "datapoints"
+ACCESS_TOKEN = '746a8dd552c05105f59b37b11d41905349848c20f1586bb9c5e746022ed5efc2'
+
+STATION_LIST = YAML.load_file('stationList.yaml')
+
+pp STATION_LIST
+
+#Local Variables:
+#code: utf-8
+#mode: text
+#End:
+
